@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.RegisterActivity"
-    android:background="@color/register_bk_color"
     android:focusableInTouchMode="true"
     android:gravity="center"
     android:layout_gravity="center">
@@ -28,13 +27,13 @@
                     android:layout_centerVertical="true"
                     android:layout_alignParentLeft="true"
                     style="@style/viewParent.headerText.NoMode"
-                    android:textColor="@color/whiteTextColor"
+                    android:textColor="#000000"
                     android:text="Here’s\nyour first\nstep with \nus! "/>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_login_hero"
+                    android:src="@drawable/ic_launcher_logo"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"/>
             </RelativeLayout>
@@ -105,7 +104,7 @@
                     <Button
                         android:id="@+id/btnRegister"
                         style="@style/loginButton"
-                        android:background="@color/design_default_color_secondary"
+                        android:background="@color/appButtonColor"
                         android:text="Register"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/loginViewsMargin"/>
@@ -114,7 +113,7 @@
                         style="@style/parent"
                         android:textAlignment="center"
                         android:textStyle="bold"
-                        android:textColor="@color/themeColor"
+                        android:textColor="@color/appButtonColor"
                         android:textSize="17sp"
                         android:text="Already have an account?"
                         android:layout_marginTop="@dimen/loginViewsMargin"/>
@@ -162,7 +161,7 @@
         android:layout_alignParentRight="true"
         android:layout_width="11dp"
         android:layout_height="match_parent"
-        android:background="@drawable/ic_side_bg"/>
+        android:background="@color/appButtonColor"/>
 
     <ImageView
         android:layout_alignParentBottom="true"
@@ -171,6 +170,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_back_img"
         android:layout_marginRight="11dp"
+        android:background="@color/appButtonColor"
         android:layout_marginBottom="30dp"
         android:adjustViewBounds="false"/>
 
