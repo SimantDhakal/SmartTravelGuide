@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="activity.DetailSubCategoryActivity"
+    tools:showIn="@layout/activity_detail_sub_category">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/top"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hotel Name"
+            android:id="@+id/name"
+            android:textSize="18dp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:id="@+id/desc"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/menu"
+            android:text="Services"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorAccent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_recyclerView">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="See More"
+            android:textSize="16dp"
+            android:id="@+id/service"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="viewEnd"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

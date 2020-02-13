@@ -1,0 +1,101 @@
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="4dp"
+    android:minWidth="300dp"
+    app:cardPreventCornerOverlap="false"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_gravity="left">
+
+        <ImageView
+            android:id="@+id/trendsThumbnail"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:src="@drawable/momo"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/specialMenu"
+            android:layout_toRightOf="@id/trendsThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Coffee Latte"
+            android:textColor="#676767"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="2"/>
+
+        <TextView
+            android:id="@+id/specialPrice"
+            android:layout_below="@id/specialMenu"
+            android:layout_toRightOf="@id/trendsThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Rs. 390"
+            android:layout_marginLeft="10dp"
+            android:textColor="#676767"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:maxLines="2"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/specialDesc"-->
+<!--            android:layout_below="@id/specialPrice"-->
+<!--            android:layout_toRightOf="@id/trendsThumbnail"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="The Cottage kitchenettes are equipped with all modern-->
+<!--            amenities/appliances. All cottages have their own cosy gardens,-->
+<!--            balconies and mountain views."-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:textColor="#676767"-->
+<!--            android:textSize="12sp"-->
+<!--            android:maxLines="2"/>-->
+
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/specialPrice"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_marginTop="10dp"
+            android:numStars="5"
+            android:rating="3.5"
+            android:isIndicator="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/trendsThumbnail"/>
+
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_below="@id/ratingBar"
+            android:background="#676767"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/trendsThumbnail"/>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

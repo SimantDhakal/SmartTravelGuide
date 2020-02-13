@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "480327602982",
+    "firebase_url": "https://tourandtravel-b0430.firebaseio.com",
+    "project_id": "tourandtravel-b0430",
+    "storage_bucket": "tourandtravel-b0430.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480327602982:android:7783a7edddbcf82033a7e7",
+        "android_client_info": {
+          "package_name": "com.simant.tourandtravel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480327602982-retakrdabcjmhu3o7cihqemg09boq2tr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simant.tourandtravel",
+            "certificate_hash": "56cec667cd31b07f4646b71cb74195772b48adbc"
+          }
+        },
+        {
+          "client_id": "480327602982-4uve24rftng5ut8eq45rm8sguol2rt23.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOfUED3R3rnv_hFzWYDBo4lc1OogjP05E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480327602982-4uve24rftng5ut8eq45rm8sguol2rt23.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
