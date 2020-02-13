@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,7 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.simant.tourandtravel.R;
 import com.simant.tourandtravel.activity.SubCategoryActivity;
+import com.simant.tourandtravel.api.BaseURL;
 import com.simant.tourandtravel.modal.CategoryModal;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -39,6 +42,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         final CategoryModal CategoryModal = teamModalClasses.get(position);
 
         holder.textView_cat.setText(CategoryModal.get_catName());
+        Picasso.get().load(BaseURL.image_url+ teamModalClasses.get(position).get_catImage()).into(holder.destinationThumbnail);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,10 +65,12 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
     class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView textView_cat;
+        ImageView destinationThumbnail;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             textView_cat = itemView.findViewById(R.id.cat_name);
+            destinationThumbnail=itemView.findViewById(R.id.destinationThumbnail);
         }
     }
 }

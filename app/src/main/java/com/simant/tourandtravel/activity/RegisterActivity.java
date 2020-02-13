@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,23 +24,53 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RegisterActivity extends AppCompatActivity {
 
     EditText etFullname, etEmail, etPassword, etPhone;
+    TextView backToLogin;
     Button btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+        getSupportActionBar().hide();
+        final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         etFullname = findViewById(R.id.etFullName);
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         etPhone = findViewById(R.id.etPhone);
-
+        backToLogin=findViewById(R.id.backToLogin);
         btnRegister = findViewById(R.id.btnRegister);
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(etFullname.getText().toString().equals("") || etPhone.getText().toString().equals("") || etPassword.getText().toString().equals("")){
+                    Toast.makeText(RegisterActivity.this, "All the fields are mandatory", Toast.LENGTH_SHORT).show();
+                    etEmail.setHighlightColor(1);
+                    return;
+                }
+                if(etEmail.getText().toString().length()>0 && etEmail.getText().toString().matches(emailPattern)){
+                    if(etPassword.getText().toString().length()<6){
+                        Toast.makeText(RegisterActivity.this, "Password must be minimum of 6 characters", Toast.LENGTH_SHORT).show();
+                        etPassword.setHighlightColor(1);
+                        etPassword.requestFocus();
+                        return;
+                    }
+                }
+                else {
+                    Toast.makeText(RegisterActivity.this, "Please enter valid email", Toast.LENGTH_SHORT).show();
+                    etEmail.requestFocus();
+                    return;
+                }
+
+
                 userRegister();
+            }
+        });
+
+        backToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -33,7 +33,7 @@ public class SubCategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_category);
-
+        getSupportActionBar().hide();
         Bundle val = getIntent().getExtras();
         String _catId = val.getString("_id");
         String _name = val.getString("_name");

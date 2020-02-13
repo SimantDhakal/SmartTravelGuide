@@ -2,9 +2,6 @@ package com.simant.tourandtravel.modal;
 
 public class CategoryModal {
 
-    private String _id;
-    private String _catName;
-
     public String get_id() {
         return _id;
     }
@@ -21,9 +18,24 @@ public class CategoryModal {
         this._catName = _catName;
     }
 
-    public CategoryModal(String _id, String _catName) {
+    public String get_catImage() {
+        return _catImage;
+    }
+
+    public void set_catImage(String _catImage) {
+        this._catImage = _catImage;
+    }
+
+    public CategoryModal(String _id, String _catName, String _catImage) {
         this._id = _id;
         this._catName = _catName;
+        this._catImage = _catImage;
     }
+
+    private String _id;
+    private String _catName;
+    private String _catImage;
+
+
 
 }

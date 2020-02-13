@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,7 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.simant.tourandtravel.R;
 import com.simant.tourandtravel.activity.DetailSubCategoryActivity;
 import com.simant.tourandtravel.activity.ServiceActivity;
+import com.simant.tourandtravel.api.BaseURL;
 import com.simant.tourandtravel.modal.SubCategoryModal;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -42,7 +45,7 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
         holder.textView_cat.setText(SubCategoryModal.get_subCatName());
         holder.textView_location.setText(SubCategoryModal.get_locationName());
         holder.textView_desc.setText(SubCategoryModal.get_description());
-
+        Picasso.get().load(BaseURL.image_url+ teamModalClasses.get(position).get_image()).into(holder.subCatImage);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +55,9 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
 //                intent.putExtra("_id", SubCategoryModal.get_id());
                 intent.putExtra("_name",SubCategoryModal.get_subCatName());
                 intent.putExtra("_desc",SubCategoryModal.get_description());
+                intent.putExtra("_lat",SubCategoryModal.get_lattitude());
+                intent.putExtra("_long",SubCategoryModal.get_longitude());
+                intent.putExtra("_image",SubCategoryModal.get_image());
                 context.startActivity(intent);
             }
         });
@@ -66,12 +72,15 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
     class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView textView_cat, textView_location, textView_desc;
+        ImageView subCatImage;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             textView_cat = itemView.findViewById(R.id.subCatName);
             textView_location = itemView.findViewById(R.id.location);
             textView_desc = itemView.findViewById(R.id.desc);
+            subCatImage = itemView.findViewById(R.id.subCatImage);
+
         }
     }
 }

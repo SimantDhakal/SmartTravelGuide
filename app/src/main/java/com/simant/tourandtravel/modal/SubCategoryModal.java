@@ -10,6 +10,7 @@ public class SubCategoryModal {
     private String _longitude;
     private String _lattitude;
     private String _description;
+    private String _image;
 
     public String get_id() {
         return _id;
@@ -75,8 +76,15 @@ public class SubCategoryModal {
         this._description = _description;
     }
 
+    public String get_image() {
+        return _image;
+    }
 
-    public SubCategoryModal(String _id, String _catId, String _userId, String _subCatName, String _locationName, String _longitude, String _lattitude, String _description) {
+    public void set_image(String _image) {
+        this._image = _image;
+    }
+
+    public SubCategoryModal(String _id, String _catId, String _userId, String _subCatName, String _locationName, String _longitude, String _lattitude, String _description, String _image) {
         this._id = _id;
         this._catId = _catId;
         this._userId = _userId;
@@ -85,6 +93,8 @@ public class SubCategoryModal {
         this._longitude = _longitude;
         this._lattitude = _lattitude;
         this._description = _description;
+        this._image = _image;
     }
+
 
 }

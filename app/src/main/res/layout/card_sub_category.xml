@@ -16,7 +16,7 @@
         android:layout_gravity="left">
 
         <ImageView
-            android:id="@+id/trendsThumbnail"
+            android:id="@+id/subCatImage"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -28,7 +28,7 @@
 
         <TextView
             android:id="@+id/subCatName"
-            android:layout_toRightOf="@id/trendsThumbnail"
+            android:layout_toRightOf="@id/subCatImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -43,7 +43,7 @@
         <TextView
             android:id="@+id/location"
             android:layout_below="@id/subCatName"
-            android:layout_toRightOf="@id/trendsThumbnail"
+            android:layout_toRightOf="@id/subCatImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -61,7 +61,7 @@
             android:layout_marginTop="5dp"
             android:textColor="#000"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/trendsThumbnail"
+            android:layout_toRightOf="@id/subCatImage"
             android:layout_below="@id/location"
             android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
             android:maxLines="2"/>
@@ -74,7 +74,7 @@
             android:background="#676767"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/trendsThumbnail"/>
+            android:layout_toRightOf="@id/subCatImage"/>
 
 
     </RelativeLayout>
